@@ -1,0 +1,190 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* =========================================================
+   GLOBAL RESET + LENIS CONTROL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ❌ Disable native scroll smoothing */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* ✅ Lenis control (IMPORTANT) */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* =========================================================
+   SLIDER IMAGE
+========================================================= */
+
+.hero-text img {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid rgba(201, 127, 23, 0.8);
+}
+
+@media (min-width: 768px) {
+  .hero-text img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* =========================================================
+   SLIDE WORD
+========================================================= */
+
+.hero-text .slide {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+  height: 1.2em;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  will-change: transform;
+  animation: wordSlider 18s infinite linear;
+}
+
+.wrapper span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.2;
+}
+
+@keyframes wordSlider {
+  0% { transform: translateY(0%) }
+  12.5% { transform: translateY(-12.5%) }
+  25% { transform: translateY(-25%) }
+  37.5% { transform: translateY(-37.5%) }
+  50% { transform: translateY(-50%) }
+  62.5% { transform: translateY(-62.5%) }
+  75% { transform: translateY(-75%) }
+  87.5% { transform: translateY(-87.5%) }
+}
+
+/* =========================================================
+   RIGHT 3D MODEL
+========================================================= */
+
+.hero-3d {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-3d {
+    height: 600px;
+  }
+}
+
+/* =========================================================
+   LOGO ANIMATIONS (CLEANED)
+========================================================= */
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* =========================================================
+   NEON CARD (OPTIMIZED)
+========================================================= */
+
+.neon-card {
+  position: absolute;
+  border-radius: 24px;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+}
+
+.neon-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(0, 255, 255, 0.7) 60deg,
+    transparent 120deg,
+    rgba(255, 0, 128, 0.7) 180deg,
+    transparent 240deg,
+    rgba(0, 255, 255, 0.7) 300deg,
+    transparent 360deg
+  );
+
+  animation: rotateBorder 8s linear infinite;
+  filter: blur(3px);
+  will-change: transform;
+}
+
+.neon-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+
+  box-shadow:
+    inset 0 0 20px rgba(255,255,255,0.05),
+    inset 0 0 40px rgba(0,255,255,0.08);
+}
+
+@keyframes rotateBorder {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* =========================================================
+   PERFORMANCE BOOST
+========================================================= */
+
+img, video, canvas {
+  will-change: transform;
+}
+
+*::before,
+*::after {
+  will-change: transform;
+}
