@@ -1,6 +1,5 @@
 # 🚀 Shahnawaz | 3D Developer Portfolio
 
-![Portfolio Banner](https://www.shahnawaz.online/Portfolio.png)
 
 ## 🌐 Live Demo
 👉 https://www.shahnawaz.online
@@ -39,13 +38,11 @@ This portfolio showcases my:
 
 ---
 
-## 📸 Screenshots
-
 ### 🖥️ Home Page
-![Home](https://www.shahnawaz.online/Portfolio.png)
+![Home](https://shahnawaz.online/home.png)
 
 ### ⚙️ Loading Screen
-![Loading](https://www.shahnawaz.online/Portfolio.png)
+![Loading](https://shahnawaz.online/loading.png)
 
 ---
 
