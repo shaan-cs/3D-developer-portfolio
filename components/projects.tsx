@@ -70,16 +70,6 @@ type Project = {
 
 const projects: Project[] = [
   {
-    id: 1,
-    title: "Ilzifa Solution- Interior Design Platform",
-    description:
-      "Ilzifa Solution is a high-performance business website built with Next.js and React, delivering fast, SEO-optimized, and scalable digital experiences. It features secure communication systems with real-time email integration and is deployed on a robust CI/CD pipeline for reliability and performance.",
-    image: "/projects/project1.png",
-    tech: ["Next.js", "JavaScript", "Resend API", "Tailwind", "CSS"],
-    github: gitlink,
-    demo: "http://ilzifa.com/",
-  },
-  {
     id: 2,
     title: "sHs Green Store - E-commerce Platform",
     description:
